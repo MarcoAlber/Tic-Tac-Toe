@@ -18,6 +18,11 @@ td {
     width: 200px;
     height: 200px;
     border: 5px solid black;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(4, 82, 145, 0.1);
 }
 
 table tr:first-child td {
@@ -44,11 +49,57 @@ table tr td:last-child {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 img {
     position: absolute;
     width: 140px;
     height: 140px;
+    object-fit: cover;
+}
+
+.d-none {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .imgTable {
+        width: 85px;
+        height: 85px;
+    }
+
+    tr {
+        width: 375px;
+    }
+
+    td {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media(max-width: 430px) {
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .imgTable {
+        width: 80px;
+        height: 80px;
+    }
+
+    tr {
+        width: 300px;
+    }
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
 }
