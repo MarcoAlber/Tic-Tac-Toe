@@ -1,12 +1,13 @@
 body {
     margin: 0;
-}
-
-table {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+table {
     border-collapse: collapse;
 }
 
@@ -42,7 +43,7 @@ table tr td:last-child {
 }
 
 .imgTable {
-  position: relative;
+    position: relative;
     width: 140px;
     height: 140px;
     object-fit: cover;
@@ -51,11 +52,49 @@ table tr td:last-child {
     margin-right: auto;
 }
 
-img {
+.imgTable img {
     position: absolute;
     width: 140px;
     height: 140px;
     object-fit: cover;
+}
+
+.playerContainer {
+    display: flex;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.player1Container {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.player2Container {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.player1Container img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.player2Container img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.player-inactivate {
+    opacity: 0.5;
 }
 
 .d-none {
