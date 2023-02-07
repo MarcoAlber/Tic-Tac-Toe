@@ -101,8 +101,112 @@ table tr td:last-child {
     display: none;
 }
 
+.tablePlusLines {
+    position: relative;
+}
+
+.horizontal-line {
+    position: absolute;
+    height: 10px;
+    width: 570px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0);
+}
+
+.animateLines {
+    transition: transform 225ms ease-in-out;
+}
+
+.vertical-line {
+    transform: rotate(90deg) scaleX(0);
+}
+
+.gameOver {
+    position: absolute;
+    z-index: 2;
+    transition: zoomIn 225ms ease-in-out;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.restartButton {
+    position: absolute;
+    bottom: 100px;
+    background-color: rgb(102, 94, 94);
+    border: 0;
+    border-radius: 20px;
+    width: 300px;
+    height: 100px;
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.restartButton:hover {
+    background-color: rgb(143, 130, 130);
+}
+
+#line-0 {
+    top: 100px;
+    right: 25px;
+}
+
+#line-1 {
+    top: 307px;
+    right: 25px;
+}
+
+#line-2 {
+    top: 515px;
+    right: 25px;
+}
+
+#line-3 {
+    top: 305px;
+    left: 230px;
+}
+
+#line-4 {
+    top: 305px;
+    right: 23px;
+}
+
+#line-5 {
+    top: 305px;
+    right: 230px;
+}
+
+#line-6 {
+    top: 306px;
+    left: -64px;
+    transform: rotate(45deg) scaleX(0);
+    width: 750px;
+}
+
+#line-7 {
+    top: 306px;
+    right: -64px;
+    transform: rotate(135deg) scaleX(0);
+    width: 750px;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 @media(max-width: 700px) {
-    img {
+    .imgTable img {
         width: 85px;
         height: 85px;
     }
@@ -120,10 +224,56 @@ table tr td:last-child {
         width: 125px;
         height: 125px;
     }
+
+    .horizontal-line {
+        width: 350px;
+    }
+
+    #line-0 {
+        top: 65px;
+        right: 25px;
+    }
+
+    #line-1 {
+        top: 198px;
+        right: 25px;
+    }
+
+    #line-2 {
+        top: 322px;
+        right: 25px;
+    }
+
+    #line-3 {
+        top: 190px;
+        left: 153px;
+    }
+
+    #line-4 {
+        top: 190px;
+        right: 23px;
+    }
+
+    #line-5 {
+        top: 190px;
+        right: 156px;
+    }
+
+    #line-6 {
+        top: 196px;
+        left: -49px;
+        width: 500px;
+    }
+
+    #line-7 {
+        top: 196px;
+        right: -49px;
+        width: 500px;
+    }
 }
 
 @media(max-width: 430px) {
-    img {
+    .imgTable img {
         width: 80px;
         height: 80px;
     }
@@ -140,5 +290,75 @@ table tr td:last-child {
     td {
         width: 100px;
         height: 100px;
+    }
+
+    .playerContainer {
+        font-size: 23px;
+    }
+
+    .player1Container {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .player2Container {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .player1Container img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .player2Container img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .horizontal-line {
+        width: 290px;
+    }
+
+    #line-0 {
+        top: 50px;
+        right: 15px;
+    }
+
+    #line-1 {
+        top: 156px;
+        right: 15px;
+    }
+
+    #line-2 {
+        top: 259px;
+        right: 15px;
+    }
+
+    #line-3 {
+        top: 155px;
+        left: 120px;
+    }
+
+    #line-4 {
+        top: 155px;
+        right: 15px;
+    }
+
+    #line-5 {
+        top: 155px;
+        right: 123px;
+    }
+
+    #line-6 {
+        top: 155px;
+        left: -40px;
+        width: 400px;
+    }
+
+    #line-7 {
+        top: 155px;
+        right: -40px;
+        width: 400px;
     }
 }
